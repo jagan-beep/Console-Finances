@@ -113,3 +113,24 @@ let z = x / (months - 1);
 var changes = Math.ceil(z * 100) / 100;
 console.log(`Average change: ${changes}`);
 // ------------------------------------------------------
+let profit = 0;
+let loss = 0;
+let k = 0;
+let m = 0;
+for (var i = 0; i < finances.length - 1; i++) {
+  var diff = finances[i + 1][1] - finances[i][1];
+  profit = diff;
+  loss = diff;
+  if (k <= profit) {
+    k = profit;
+    var month = finances[i + 1][0];
+  }
+
+  if (loss <= m) {
+    m = loss;
+    var mon = finances[i + 1][0];
+  }
+}
+
+console.log(`Greatest Increase in Profits/Losses: ${month} ($${k})`);
+console.log(`Greatest Increase in Profits/Losses: ${mon} ($${m})`);
