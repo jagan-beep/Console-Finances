@@ -104,3 +104,12 @@ for (i = 0; i < finances.length; i++) {
 }
 console.log(`Total: $${total}`);
 // -----------------------------------------------------------
+var x = 0;
+for (var i = 0; i < finances.length - 1; i++) {
+  var y = finances[i + 1][1] - finances[i][1];
+  var x = x + y;
+}
+let z = x / (months - 1);
+var changes = Math.ceil(z * 100) / 100;
+console.log(`Average change: ${changes}`);
+// ------------------------------------------------------
